@@ -1,0 +1,169 @@
+@import 'config';
+
+body {
+  font-size: 1.6rem;
+  background: var(--violet) no-repeat url(/images/bg-mobile.svg);
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 80%;
+  height: 100%;
+  max-width: 1273px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.illustration {
+  max-width: 700px;
+  img {
+    width: 100%;
+    padding: 1rem 0 2rem 0;
+  }
+}
+
+.header {
+  width: 130px;
+  img {
+    width: 150px;
+    padding: 5rem 0;
+  }
+}
+
+.main {
+  //min-width: 510px;
+  text-align: center;
+  color: #ffffff;
+  &__title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem; //!Check!!
+    font-weight: 700;
+    padding: 4rem 0 2rem 0;
+  }
+  &__paragraph {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+  }
+  &__button {
+    border: 0;
+    color: gray;
+    padding: 10px 3rem;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 3rem;
+    width: 200px;
+    box-shadow: 0 4px 4px #4d4d4d;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.social {
+  text-align: center;
+  padding: 10rem 0;
+  &__link {
+    display: inline-block;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    padding: 6px;
+    width: 30px;
+    height: 30px;
+    margin-left: 8px;
+  }
+  &__icon {
+    width: 100% !important; //!CHeck this
+    height: 100%;
+  }
+}
+@media (min-width: 640px) {
+  .header {
+    img {
+      width: 180px;
+    }
+  }
+
+  .main {
+    &__title {
+      font-size: 4.4rem;
+    }
+    &__paragraph {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    background: var(--violet) no-repeat url(/images/bg-desktop.svg);
+    background-size: cover;
+  }
+  .container {
+    width: 90%;
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .illustration {
+    width: 50%;
+    margin-right: 2rem;
+  }
+
+  .main {
+    text-align: left;
+    width: 50%;
+    &__title {
+      font-size: 2.6rem;
+    }
+    &__paragraph {
+      font-size: 1.4rem;
+    }
+  }
+
+  .social {
+    text-align: right;
+    &__link {
+      text-align: center;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    background-size: contain;
+  }
+  .main {
+    padding-left: 3rem;
+    &__title {
+      font-size: 3.4rem;
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  .header {
+    width: 210px;
+  }
+  .illustration {
+    width: 60%;
+  }
+  .main {
+    &__title {
+      font-size: 4.5rem;
+    }
+    &__paragraph {
+      font-size: 1.9rem;
+    }
+  }
+}
